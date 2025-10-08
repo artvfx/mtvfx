@@ -140,7 +140,8 @@ const CreatePage: React.FC = () => {
         setGeneratedImageUrl(null);
 
         try {
-            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+            const ai = new GoogleGenAI({
+  apiKey: import.meta.env.VITE_API_KEY });
             
             let prompt = `You are an expert photo editor. Your task is to integrate one or more holographic products into a user-provided background scene image.`;
 
